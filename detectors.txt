@@ -1,0 +1,41 @@
+OPTIONAL:
+scrubadub.detectors.DateOfBirthDetector             DateOfBirthDetector does not support language it.
+scrubadub.detectors.SkypeDetector                   NON USARE
+scrubadub.detectors.TaggedEvaluationFilthDetector   NON USARE
+scrubadub.detectors.TextBlobNameDetector            NON USARE
+scrubadub.detectors.UserSuppliedFilthDetector       NON USARE
+
+EXTERNAL:
+scrubadub_address.detectors.AddressDetector
+scrubadub_spacy.detectors.SpacyNameDetector             
+scrubadub_spacy.detectors.SpacyEntityDetector           Bisogna specificare il "Model" per Spacy (da provare con piu' lingue)
+scrubadub_stanford.detectors.StanfordEntityDetector
+
+
+CONCLUSIONI:************************************************
+- librerie acerbe, soprattutto in lingua italiana, da qui c'e' da aspettarsi che anche i prodotti commerciali se vengono da oltreoceano non siano pronti
+- Lavorare con le regexp e' comunque inevitabile anche per i molti dati personali non standard (es. badge)
+- L'approccio bottom-up e' cmq necessario per comprendere con che dati si ha a che fare e allo stato attuale cmq di raggiungere buoni livelli di assesment per le PMI
+- I Dati Personali sono anche nei doc. cartacei (ancora molti nelle PMI italiane)
+************************************************************************************************
+
+TESTO:
+        "Buongiorno. Mi chiamo Mario Rossi e lavoro per Acme SpA, i miei recapiti telefonico sono 0471 657790 e 340.22567890, rispondo agli indirizzi mario.rossi@yahoo.com e anche a m.rossi@acme.it. \
+        Uso la CC n. 3716820019271998 e acquisto spesso su www.amazon.com ma a volte anche su zalando.com \
+        sono nato il 14 settembre 1996 ed abito a Roma in via Industria, 54 \
+        Guido una VW Polo targata FD456TT. Usando la patente n. U1H68I903B \
+        Grazie e cari saluti. \
+        -----------------------------------------------------\
+        Good morning. My name is John Smith and I work for Acme SpA, my telephone numbers are 408 677 8989 and +16102347346 , I reply to the addresses john.smith@yahoo.com and also to j.smith@acme.it. \
+        I use the CC n. 3716820019271998 and I often buy on www.amazon.com but sometimes also on zalando.com \
+        I was born on 14 September 1996 and I live in 65 2nd Avenue, New York \
+        I drive a Chrisler Crossfire with license plate is 12-345S, my driver license number is G544-061-73-925-0.\
+        Thanks and best regards. \
+        "
+
+--------------------------------------
+[theme]
+base="light"
+primaryColor="#009688"
+
+To save your changes, copy your custom theme into the clipboard and paste it into the[theme] section of your .streamlit/config.toml file.
